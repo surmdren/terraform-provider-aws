@@ -4432,7 +4432,7 @@ func (c *EC2) CreateInstanceExportTaskRequest(input *CreateInstanceExportTaskInp
 
 // CreateInstanceExportTask API operation for Amazon Elastic Compute Cloud.
 //
-// Exports a running or stopped instance to an S3 bucket.
+// Exports a running or stopped instance to an Amazon S3 bucket.
 //
 // For information about the supported operating systems, image formats, and
 // known limitations for the types of instances you can export, see Exporting
@@ -5397,7 +5397,7 @@ func (c *EC2) CreatePlacementGroupRequest(input *CreatePlacementGroupInput) (req
 // instances in one partition do not share the same hardware with instances
 // in another partition.
 //
-// For more information, see Placement Groups (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html)
+// For more information, see Placement groups (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -9318,7 +9318,7 @@ func (c *EC2) DeletePlacementGroupRequest(input *DeletePlacementGroupInput) (req
 //
 // Deletes the specified placement group. You must terminate all instances in
 // the placement group before you can delete the placement group. For more information,
-// see Placement Groups (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html)
+// see Placement groups (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -13984,7 +13984,7 @@ func (c *EC2) DescribeExportImageTasksRequest(input *DescribeExportImageTasksInp
 
 // DescribeExportImageTasks API operation for Amazon Elastic Compute Cloud.
 //
-// Describes the specified export image tasks or all your export image tasks.
+// Describes the specified export image tasks or all of your export image tasks.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
 // with awserr.Error's Code and Message methods to get detailed information about
@@ -14110,7 +14110,7 @@ func (c *EC2) DescribeExportTasksRequest(input *DescribeExportTasksInput) (req *
 
 // DescribeExportTasks API operation for Amazon Elastic Compute Cloud.
 //
-// Describes the specified export instance tasks or all your export instance
+// Describes the specified export instance tasks or all of your export instance
 // tasks.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -16195,7 +16195,7 @@ func (c *EC2) DescribeInstanceCreditSpecificationsRequest(input *DescribeInstanc
 // all, the call fails. If you specify only instance IDs in an unaffected zone,
 // the call works normally.
 //
-// For more information, see Burstable Performance Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
+// For more information, see Burstable performance instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -16411,18 +16411,18 @@ func (c *EC2) DescribeInstanceStatusRequest(input *DescribeInstanceStatusInput) 
 //
 //    * Status checks - Amazon EC2 performs status checks on running EC2 instances
 //    to identify hardware and software issues. For more information, see Status
-//    Checks for Your Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html)
-//    and Troubleshooting Instances with Failed Status Checks (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstances.html)
+//    checks for your instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html)
+//    and Troubleshooting instances with failed status checks (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstances.html)
 //    in the Amazon Elastic Compute Cloud User Guide.
 //
 //    * Scheduled events - Amazon EC2 can schedule events (such as reboot, stop,
 //    or terminate) for your instances related to hardware issues, software
-//    updates, or system maintenance. For more information, see Scheduled Events
-//    for Your Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-instances-status-check_sched.html)
+//    updates, or system maintenance. For more information, see Scheduled events
+//    for your instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-instances-status-check_sched.html)
 //    in the Amazon Elastic Compute Cloud User Guide.
 //
 //    * Instance state - You can manage your instances from the moment you launch
-//    them through their termination. For more information, see Instance Lifecycle
+//    them through their termination. For more information, see Instance lifecycle
 //    (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html)
 //    in the Amazon Elastic Compute Cloud User Guide.
 //
@@ -19111,7 +19111,7 @@ func (c *EC2) DescribePlacementGroupsRequest(input *DescribePlacementGroupsInput
 // DescribePlacementGroups API operation for Amazon Elastic Compute Cloud.
 //
 // Describes the specified placement groups or all of your placement groups.
-// For more information, see Placement Groups (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html)
+// For more information, see Placement groups (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -20884,12 +20884,12 @@ func (c *EC2) DescribeSnapshotsRequest(input *DescribeSnapshotsInput) (req *requ
 // (if you own the snapshots), self for snapshots for which you own or have
 // explicit permissions, or all for public snapshots.
 //
-// If you are describing a long list of snapshots, you can paginate the output
-// to make the list more manageable. The MaxResults parameter sets the maximum
-// number of results returned in a single page. If the list of results exceeds
-// your MaxResults value, then that number of results is returned along with
-// a NextToken value that can be passed to a subsequent DescribeSnapshots request
-// to retrieve the remaining results.
+// If you are describing a long list of snapshots, we recommend that you paginate
+// the output to make the list more manageable. The MaxResults parameter sets
+// the maximum number of results returned in a single page. If the list of results
+// exceeds your MaxResults value, then that number of results is returned along
+// with a NextToken value that can be passed to a subsequent DescribeSnapshots
+// request to retrieve the remaining results.
 //
 // To get the state of fast snapshot restores for a snapshot, use DescribeFastSnapshotRestores.
 //
@@ -23524,12 +23524,12 @@ func (c *EC2) DescribeVolumesRequest(input *DescribeVolumesInput) (req *request.
 //
 // Describes the specified EBS volumes or all of your EBS volumes.
 //
-// If you are describing a long list of volumes, you can paginate the output
-// to make the list more manageable. The MaxResults parameter sets the maximum
-// number of results returned in a single page. If the list of results exceeds
-// your MaxResults value, then that number of results is returned along with
-// a NextToken value that can be passed to a subsequent DescribeVolumes request
-// to retrieve the remaining results.
+// If you are describing a long list of volumes, we recommend that you paginate
+// the output to make the list more manageable. The MaxResults parameter sets
+// the maximum number of results returned in a single page. If the list of results
+// exceeds your MaxResults value, then that number of results is returned along
+// with a NextToken value that can be passed to a subsequent DescribeVolumes
+// request to retrieve the remaining results.
 //
 // For more information about EBS volumes, see Amazon EBS Volumes (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumes.html)
 // in the Amazon Elastic Compute Cloud User Guide.
@@ -23664,19 +23664,17 @@ func (c *EC2) DescribeVolumesModificationsRequest(input *DescribeVolumesModifica
 
 // DescribeVolumesModifications API operation for Amazon Elastic Compute Cloud.
 //
-// Reports the current modification status of EBS volumes.
+// Describes the most recent volume modification request for the specified EBS
+// volumes.
 //
-// Current-generation EBS volumes support modification of attributes including
-// type, size, and (for io1 volumes) IOPS provisioning while either attached
-// to or detached from an instance. Following an action from the API or the
-// console to modify a volume, the status of the modification may be modifying,
-// optimizing, completed, or failed. If a volume has never been modified, then
-// certain elements of the returned VolumeModification objects are null.
+// If a volume has never been modified, some information in the output will
+// be null. If a volume has been modified more than once, the output includes
+// only the most recent modification request.
 //
 // You can also use CloudWatch Events to check the status of a modification
 // to an EBS volume. For information about CloudWatch Events, see the Amazon
 // CloudWatch Events User Guide (https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/).
-// For more information, see Monitoring Volume Modifications" (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#monitoring_mods)
+// For more information, see Monitoring Volume Modifications (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#monitoring_mods)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -28056,7 +28054,7 @@ func (c *EC2) GetDefaultCreditSpecificationRequest(input *GetDefaultCreditSpecif
 // Describes the default credit option for CPU usage of a burstable performance
 // instance family.
 //
-// For more information, see Burstable Performance Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
+// For more information, see Burstable performance instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -29854,7 +29852,7 @@ func (c *EC2) ModifyDefaultCreditSpecificationRequest(input *ModifyDefaultCredit
 // can call GetDefaultCreditSpecification and check DefaultCreditSpecification
 // for updates.
 //
-// For more information, see Burstable Performance Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
+// For more information, see Burstable performance instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -30566,7 +30564,7 @@ func (c *EC2) ModifyInstanceAttributeRequest(input *ModifyInstanceAttributeInput
 // we recommend that you use the ModifyNetworkInterfaceAttribute action.
 //
 // To modify some attributes, the instance must be stopped. For more information,
-// see Modifying Attributes of a Stopped Instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_ChangingAttributesWhileInstanceStopped.html)
+// see Modifying attributes of a stopped instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_ChangingAttributesWhileInstanceStopped.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -30721,7 +30719,7 @@ func (c *EC2) ModifyInstanceCreditSpecificationRequest(input *ModifyInstanceCred
 // Modifies the credit option for CPU usage on a running or stopped burstable
 // performance instance. The credit options are standard and unlimited.
 //
-// For more information, see Burstable Performance Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
+// For more information, see Burstable performance instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -30876,7 +30874,7 @@ func (c *EC2) ModifyInstanceMetadataOptionsRequest(input *ModifyInstanceMetadata
 // the API responds with a state of “pending”. After the parameter modifications
 // are successfully applied to the instance, the state of the modifications
 // changes from “pending” to “applied” in subsequent describe-instances
-// API calls. For more information, see Instance Metadata and User Data (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html).
+// API calls. For more information, see Instance metadata and user data (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html).
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
 // with awserr.Error's Code and Message methods to get detailed information about
@@ -32879,7 +32877,7 @@ func (c *EC2) MonitorInstancesRequest(input *MonitorInstancesInput) (req *reques
 // MonitorInstances API operation for Amazon Elastic Compute Cloud.
 //
 // Enables detailed monitoring for a running instance. Otherwise, basic monitoring
-// is enabled. For more information, see Monitoring Your Instances and Volumes
+// is enabled. For more information, see Monitoring your instances and volumes
 // (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
@@ -33383,8 +33381,8 @@ func (c *EC2) RebootInstancesRequest(input *RebootInstancesInput) (req *request.
 // If an instance does not cleanly shut down within four minutes, Amazon EC2
 // performs a hard reboot.
 //
-// For more information about troubleshooting, see Getting Console Output and
-// Rebooting Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html)
+// For more information about troubleshooting, see Getting console output and
+// rebooting instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -35838,17 +35836,17 @@ func (c *EC2) RunInstancesRequest(input *RunInstancesInput) (req *request.Reques
 //
 //    * Some instance types must be launched into a VPC. If you do not have
 //    a default VPC, or if you do not specify a subnet ID, the request fails.
-//    For more information, see Instance Types Available Only in a VPC (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html#vpc-only-instance-types).
+//    For more information, see Instance types available only in a VPC (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html#vpc-only-instance-types).
 //
 //    * [EC2-VPC] All instances have a network interface with a primary private
 //    IPv4 address. If you don't specify this address, we choose one from the
 //    IPv4 range of your subnet.
 //
 //    * Not all instance types support IPv6 addresses. For more information,
-//    see Instance Types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html).
+//    see Instance types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html).
 //
 //    * If you don't specify a security group ID, we use the default security
-//    group. For more information, see Security Groups (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html).
+//    group. For more information, see Security groups (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html).
 //
 //    * If any of the AMIs have a product code attached for which the user has
 //    not subscribed, the request fails.
@@ -35865,17 +35863,17 @@ func (c *EC2) RunInstancesRequest(input *RunInstancesInput) (req *request.Reques
 // An instance is ready for you to use when it's in the running state. You can
 // check the state of your instance using DescribeInstances. You can tag instances
 // and EBS volumes during launch, after launch, or both. For more information,
-// see CreateTags and Tagging Your Amazon EC2 Resources (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html).
+// see CreateTags and Tagging your Amazon EC2 resources (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html).
 //
 // Linux instances have access to the public key of the key pair at boot. You
 // can use this key to provide secure access to the instance. Amazon EC2 public
 // images use this feature to provide secure access without passwords. For more
-// information, see Key Pairs (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html)
+// information, see Key pairs (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
-// For troubleshooting, see What To Do If An Instance Immediately Terminates
+// For troubleshooting, see What to do if an instance immediately terminates
 // (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_InstanceStraightToTerminated.html),
-// and Troubleshooting Connecting to Your Instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html)
+// and Troubleshooting connecting to your instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -36388,8 +36386,8 @@ func (c *EC2) SendDiagnosticInterruptRequest(input *SendDiagnosticInterruptInput
 // system is configured to perform the required diagnostic tasks.
 //
 // For more information about configuring your operating system to generate
-// a crash dump when a kernel panic or stop error occurs, see Send a Diagnostic
-// Interrupt (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/diagnostic-interrupt.html)
+// a crash dump when a kernel panic or stop error occurs, see Send a diagnostic
+// interrupt (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/diagnostic-interrupt.html)
 // (Linux instances) or Send a Diagnostic Interrupt (https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/diagnostic-interrupt.html)
 // (Windows instances).
 //
@@ -36486,7 +36484,7 @@ func (c *EC2) StartInstancesRequest(input *StartInstancesInput) (req *request.Re
 // Performing this operation on an instance that uses an instance store as its
 // root device returns an error.
 //
-// For more information, see Stopping Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html)
+// For more information, see Stopping instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -36649,7 +36647,7 @@ func (c *EC2) StopInstancesRequest(input *StopInstancesInput) (req *request.Requ
 // You can use the Stop action to hibernate an instance if the instance is enabled
 // for hibernation (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#enabling-hibernation)
 // and it meets the hibernation prerequisites (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#hibernating-prerequisites).
-// For more information, see Hibernate Your Instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
+// For more information, see Hibernate your instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // We don't charge usage for a stopped instance, or data transfer fees; however,
@@ -36665,7 +36663,7 @@ func (c *EC2) StopInstancesRequest(input *StopInstancesInput) (req *request.Requ
 // You can't stop or hibernate instance store-backed instances. You can't use
 // the Stop action to hibernate Spot Instances, but you can specify that Amazon
 // EC2 should hibernate Spot Instances when they are interrupted. For more information,
-// see Hibernating Interrupted Spot Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html#hibernate-spot-instances)
+// see Hibernating interrupted Spot Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html#hibernate-spot-instances)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // When you stop or hibernate an instance, we shut it down. You can restart
@@ -36681,13 +36679,13 @@ func (c *EC2) StopInstancesRequest(input *StopInstancesInput) (req *request.Requ
 // an instance, the root device and any other devices attached during the instance
 // launch are automatically deleted. For more information about the differences
 // between rebooting, stopping, hibernating, and terminating instances, see
-// Instance Lifecycle (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html)
+// Instance lifecycle (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // When you stop an instance, we attempt to shut it down forcibly after a short
 // while. If your instance appears stuck in the stopping state after a period
 // of time, there may be an issue with the underlying host computer. For more
-// information, see Troubleshooting Stopping Your Instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesStopping.html)
+// information, see Troubleshooting stopping your instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesStopping.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -36857,11 +36855,11 @@ func (c *EC2) TerminateInstancesRequest(input *TerminateInstancesInput) (req *re
 // an instance, any attached EBS volumes with the DeleteOnTermination block
 // device mapping parameter set to true are automatically deleted. For more
 // information about the differences between stopping and terminating instances,
-// see Instance Lifecycle (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html)
+// see Instance lifecycle (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
-// For more information about troubleshooting, see Troubleshooting Terminating
-// Your Instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesShuttingDown.html)
+// For more information about troubleshooting, see Troubleshooting terminating
+// your instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesShuttingDown.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -37086,7 +37084,7 @@ func (c *EC2) UnmonitorInstancesRequest(input *UnmonitorInstancesInput) (req *re
 // UnmonitorInstances API operation for Amazon Elastic Compute Cloud.
 //
 // Disables detailed monitoring for a running instance. For more information,
-// see Monitoring Your Instances and Volumes (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html)
+// see Monitoring your instances and volumes (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -46261,7 +46259,7 @@ type CreateInstanceExportTaskInput struct {
 	_ struct{} `type:"structure"`
 
 	// A description for the conversion task or the resource being exported. The
-	// maximum length is 255 bytes.
+	// maximum length is 255 characters.
 	Description *string `locationName:"description" type:"string"`
 
 	// The format and location for an instance export task.
@@ -46271,6 +46269,9 @@ type CreateInstanceExportTaskInput struct {
 	//
 	// InstanceId is a required field
 	InstanceId *string `locationName:"instanceId" type:"string" required:"true"`
+
+	// The tags to apply to the instance export task during creation.
+	TagSpecifications []*TagSpecification `locationName:"TagSpecification" locationNameList:"item" type:"list"`
 
 	// The target virtualization environment.
 	TargetEnvironment *string `locationName:"targetEnvironment" type:"string" enum:"ExportEnvironment"`
@@ -46314,6 +46315,12 @@ func (s *CreateInstanceExportTaskInput) SetExportToS3Task(v *ExportToS3TaskSpeci
 // SetInstanceId sets the InstanceId field's value.
 func (s *CreateInstanceExportTaskInput) SetInstanceId(v string) *CreateInstanceExportTaskInput {
 	s.InstanceId = &v
+	return s
+}
+
+// SetTagSpecifications sets the TagSpecifications field's value.
+func (s *CreateInstanceExportTaskInput) SetTagSpecifications(v []*TagSpecification) *CreateInstanceExportTaskInput {
+	s.TagSpecifications = v
 	return s
 }
 
@@ -57518,10 +57525,11 @@ type DescribeFastSnapshotRestoreSuccessItem struct {
 	// The time at which fast snapshot restores entered the optimizing state.
 	OptimizingTime *time.Time `locationName:"optimizingTime" type:"timestamp"`
 
-	// The alias of the snapshot owner.
+	// The AWS owner alias that enabled fast snapshot restores on the snapshot.
+	// This is intended for future use.
 	OwnerAlias *string `locationName:"ownerAlias" type:"string"`
 
-	// The ID of the AWS account that owns the snapshot.
+	// The ID of the AWS account that enabled fast snapshot restores on the snapshot.
 	OwnerId *string `locationName:"ownerId" type:"string"`
 
 	// The ID of the snapshot.
@@ -57629,7 +57637,8 @@ type DescribeFastSnapshotRestoresInput struct {
 	//
 	//    * availability-zone: The Availability Zone of the snapshot.
 	//
-	//    * owner-id: The ID of the AWS account that owns the snapshot.
+	//    * owner-id: The ID of the AWS account that enabled fast snapshot restore
+	//    on the snapshot.
 	//
 	//    * snapshot-id: The ID of the snapshot.
 	//
@@ -60372,6 +60381,9 @@ type DescribeInstanceTypesInput struct {
 	//
 	//    * ebs-info.encryption-support - Indicates whether EBS encryption is supported.
 	//    (supported | unsupported)
+	//
+	//    * ebs-info.nvme-support - Indicates whether non-volatile memory express
+	//    (NVMe) is supported or required. (required | supported | unsupported)
 	//
 	//    * free-tier-eligible - Indicates whether the instance type is eligible
 	//    to use in the free tier. (true | false)
@@ -64990,12 +65002,12 @@ type DescribeSnapshotsInput struct {
 	//
 	//    * encrypted - Indicates whether the snapshot is encrypted (true | false)
 	//
-	//    * owner-alias - Value from an Amazon-maintained list (amazon | self |
-	//    all | aws-marketplace | microsoft) of snapshot owners. Not to be confused
-	//    with the user-configured AWS account alias, which is set from the IAM
-	//    console.
+	//    * owner-alias - The owner alias, from an Amazon-maintained list (amazon).
+	//    This is not the user-configured AWS account alias set using the IAM console.
+	//    We recommend that you use the related parameter instead of this filter.
 	//
-	//    * owner-id - The ID of the AWS account that owns the snapshot.
+	//    * owner-id - The AWS account ID of the owner. We recommend that you use
+	//    the related parameter instead of this filter.
 	//
 	//    * progress - The progress of the snapshot, as a percentage (for example,
 	//    80%).
@@ -65039,7 +65051,8 @@ type DescribeSnapshotsInput struct {
 	// to return.
 	NextToken *string `type:"string"`
 
-	// Describes the snapshots owned by these owners.
+	// Scopes the results to snapshots with the specified owners. You can specify
+	// a combination of AWS account IDs, self, and amazon.
 	OwnerIds []*string `locationName:"Owner" locationNameList:"Owner" type:"list"`
 
 	// The IDs of the AWS accounts that can create volumes from the snapshot.
@@ -67778,9 +67791,34 @@ type DescribeVolumesModificationsInput struct {
 	// it is UnauthorizedOperation.
 	DryRun *bool `type:"boolean"`
 
-	// The filters. Supported filters: volume-id | modification-state | target-size
-	// | target-iops | target-volume-type | original-size | original-iops | original-volume-type
-	// | start-time | originalMultiAttachEnabled | targetMultiAttachEnabled.
+	// The filters.
+	//
+	//    * modification-state - The current modification state (modifying | optimizing
+	//    | completed | failed).
+	//
+	//    * original-iops - The original IOPS rate of the volume.
+	//
+	//    * original-size - The original size of the volume, in GiB.
+	//
+	//    * original-volume-type - The original volume type of the volume (standard
+	//    | io1 | gp2 | sc1 | st1).
+	//
+	//    * originalMultiAttachEnabled - Indicates whether Multi-Attach support
+	//    was enabled (true | false).
+	//
+	//    * start-time - The modification start time.
+	//
+	//    * target-iops - The target IOPS rate of the volume.
+	//
+	//    * target-size - The target size of the volume, in GiB.
+	//
+	//    * target-volume-type - The target volume type of the volume (standard
+	//    | io1 | gp2 | sc1 | st1).
+	//
+	//    * targetMultiAttachEnabled - Indicates whether Multi-Attach support is
+	//    to be enabled (true | false).
+	//
+	//    * volume-id - The ID of the volume.
 	Filters []*Filter `locationName:"Filter" locationNameList:"Filter" type:"list"`
 
 	// The maximum number of results (up to a limit of 500) to be returned in a
@@ -67790,7 +67828,7 @@ type DescribeVolumesModificationsInput struct {
 	// The nextToken value returned by a previous paginated request.
 	NextToken *string `type:"string"`
 
-	// The IDs of the volumes for which in-progress modifications will be described.
+	// The IDs of the volumes.
 	VolumeIds []*string `locationName:"VolumeId" locationNameList:"VolumeId" type:"list"`
 }
 
@@ -70101,10 +70139,11 @@ type DisableFastSnapshotRestoreSuccessItem struct {
 	// The time at which fast snapshot restores entered the optimizing state.
 	OptimizingTime *time.Time `locationName:"optimizingTime" type:"timestamp"`
 
-	// The alias of the snapshot owner.
+	// The AWS owner alias that enabled fast snapshot restores on the snapshot.
+	// This is intended for future use.
 	OwnerAlias *string `locationName:"ownerAlias" type:"string"`
 
-	// The ID of the AWS account that owns the snapshot.
+	// The ID of the AWS account that enabled fast snapshot restores on the snapshot.
 	OwnerId *string `locationName:"ownerId" type:"string"`
 
 	// The ID of the snapshot.
@@ -71517,7 +71556,7 @@ type EbsBlockDevice struct {
 	_ struct{} `type:"structure"`
 
 	// Indicates whether the EBS volume is deleted on instance termination. For
-	// more information, see Preserving Amazon EBS Volumes on Instance Termination
+	// more information, see Preserving Amazon EBS volumes on instance termination
 	// (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
 	// in the Amazon Elastic Compute Cloud User Guide.
 	DeleteOnTermination *bool `locationName:"deleteOnTermination" type:"boolean"`
@@ -71532,7 +71571,7 @@ type EbsBlockDevice struct {
 	// In no case can you remove encryption from an encrypted volume.
 	//
 	// Encrypted volumes can only be attached to instances that support Amazon EBS
-	// encryption. For more information, see Supported Instance Types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances).
+	// encryption. For more information, see Supported instance types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances).
 	//
 	// This parameter is not returned by .
 	Encrypted *bool `locationName:"encrypted" type:"boolean"`
@@ -71541,7 +71580,7 @@ type EbsBlockDevice struct {
 	// For io1 volumes, this represents the number of IOPS that are provisioned
 	// for the volume. For gp2 volumes, this represents the baseline performance
 	// of the volume and the rate at which the volume accumulates I/O credits for
-	// bursting. For more information, see Amazon EBS Volume Types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html)
+	// bursting. For more information, see Amazon EBS volume types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html)
 	// in the Amazon Elastic Compute Cloud User Guide.
 	//
 	// Constraints: Range is 100-16,000 IOPS for gp2 volumes and 100 to 64,000IOPS
@@ -71653,6 +71692,9 @@ type EbsInfo struct {
 
 	// Indicates whether Amazon EBS encryption is supported.
 	EncryptionSupport *string `locationName:"encryptionSupport" type:"string" enum:"EbsEncryptionSupport"`
+
+	// Indicates whether non-volatile memory express (NVMe) is supported.
+	NvmeSupport *string `locationName:"nvmeSupport" type:"string" enum:"EbsNvmeSupport"`
 }
 
 // String returns the string representation
@@ -71680,6 +71722,12 @@ func (s *EbsInfo) SetEbsOptimizedSupport(v string) *EbsInfo {
 // SetEncryptionSupport sets the EncryptionSupport field's value.
 func (s *EbsInfo) SetEncryptionSupport(v string) *EbsInfo {
 	s.EncryptionSupport = &v
+	return s
+}
+
+// SetNvmeSupport sets the NvmeSupport field's value.
+func (s *EbsInfo) SetNvmeSupport(v string) *EbsInfo {
+	s.NvmeSupport = &v
 	return s
 }
 
@@ -72115,7 +72163,7 @@ type ElasticInferenceAccelerator struct {
 	Count *int64 `min:"1" type:"integer"`
 
 	// The type of elastic inference accelerator. The possible values are eia1.medium,
-	// eia1.large, and eia1.xlarge.
+	// eia1.large, eia1.xlarge, eia2.medium, eia2.large, and eia2.xlarge.
 	//
 	// Type is a required field
 	Type *string `type:"string" required:"true"`
@@ -72383,10 +72431,11 @@ type EnableFastSnapshotRestoreSuccessItem struct {
 	// The time at which fast snapshot restores entered the optimizing state.
 	OptimizingTime *time.Time `locationName:"optimizingTime" type:"timestamp"`
 
-	// The alias of the snapshot owner.
+	// The AWS owner alias that enabled fast snapshot restores on the snapshot.
+	// This is intended for future use.
 	OwnerAlias *string `locationName:"ownerAlias" type:"string"`
 
-	// The ID of the AWS account that owns the snapshot.
+	// The ID of the AWS account that enabled fast snapshot restores on the snapshot.
 	OwnerId *string `locationName:"ownerId" type:"string"`
 
 	// The ID of the snapshot.
@@ -73198,7 +73247,7 @@ type ExportImageInput struct {
 	// Token to enable idempotency for export image requests.
 	ClientToken *string `type:"string" idempotencyToken:"true"`
 
-	// A description of the image being exported. The maximum length is 255 bytes.
+	// A description of the image being exported. The maximum length is 255 characters.
 	Description *string `type:"string"`
 
 	// The disk image format.
@@ -73218,15 +73267,18 @@ type ExportImageInput struct {
 	ImageId *string `type:"string" required:"true"`
 
 	// The name of the role that grants VM Import/Export permission to export images
-	// to your S3 bucket. If this parameter is not specified, the default role is
-	// named 'vmimport'.
+	// to your Amazon S3 bucket. If this parameter is not specified, the default
+	// role is named 'vmimport'.
 	RoleName *string `type:"string"`
 
-	// Information about the destination S3 bucket. The bucket must exist and grant
-	// WRITE and READ_ACP permissions to the AWS account vm-import-export@amazon.com.
+	// Information about the destination Amazon S3 bucket. The bucket must exist
+	// and grant WRITE and READ_ACP permissions to the AWS account vm-import-export@amazon.com.
 	//
 	// S3ExportLocation is a required field
 	S3ExportLocation *ExportTaskS3LocationRequest `type:"structure" required:"true"`
+
+	// The tags to apply to the image being exported.
+	TagSpecifications []*TagSpecification `locationName:"TagSpecification" locationNameList:"item" type:"list"`
 }
 
 // String returns the string representation
@@ -73305,6 +73357,12 @@ func (s *ExportImageInput) SetS3ExportLocation(v *ExportTaskS3LocationRequest) *
 	return s
 }
 
+// SetTagSpecifications sets the TagSpecifications field's value.
+func (s *ExportImageInput) SetTagSpecifications(v []*TagSpecification) *ExportImageInput {
+	s.TagSpecifications = v
+	return s
+}
+
 type ExportImageOutput struct {
 	_ struct{} `type:"structure"`
 
@@ -73324,10 +73382,10 @@ type ExportImageOutput struct {
 	Progress *string `locationName:"progress" type:"string"`
 
 	// The name of the role that grants VM Import/Export permission to export images
-	// to your S3 bucket.
+	// to your Amazon S3 bucket.
 	RoleName *string `locationName:"roleName" type:"string"`
 
-	// Information about the destination S3 bucket.
+	// Information about the destination Amazon S3 bucket.
 	S3ExportLocation *ExportTaskS3Location `locationName:"s3ExportLocation" type:"structure"`
 
 	// The status of the export image task. The possible values are active, completed,
@@ -73336,6 +73394,9 @@ type ExportImageOutput struct {
 
 	// The status message for the export image task.
 	StatusMessage *string `locationName:"statusMessage" type:"string"`
+
+	// Any tags assigned to the image being exported.
+	Tags []*Tag `locationName:"tagSet" locationNameList:"item" type:"list"`
 }
 
 // String returns the string representation
@@ -73402,6 +73463,12 @@ func (s *ExportImageOutput) SetStatusMessage(v string) *ExportImageOutput {
 	return s
 }
 
+// SetTags sets the Tags field's value.
+func (s *ExportImageOutput) SetTags(v []*Tag) *ExportImageOutput {
+	s.Tags = v
+	return s
+}
+
 // Describes an export image task.
 type ExportImageTask struct {
 	_ struct{} `type:"structure"`
@@ -73418,7 +73485,7 @@ type ExportImageTask struct {
 	// The percent complete of the export image task.
 	Progress *string `locationName:"progress" type:"string"`
 
-	// Information about the destination S3 bucket.
+	// Information about the destination Amazon S3 bucket.
 	S3ExportLocation *ExportTaskS3Location `locationName:"s3ExportLocation" type:"structure"`
 
 	// The status of the export image task. The possible values are active, completed,
@@ -73427,6 +73494,9 @@ type ExportImageTask struct {
 
 	// The status message for the export image task.
 	StatusMessage *string `locationName:"statusMessage" type:"string"`
+
+	// Any tags assigned to the image being exported.
+	Tags []*Tag `locationName:"tagSet" locationNameList:"item" type:"list"`
 }
 
 // String returns the string representation
@@ -73478,6 +73548,12 @@ func (s *ExportImageTask) SetStatus(v string) *ExportImageTask {
 // SetStatusMessage sets the StatusMessage field's value.
 func (s *ExportImageTask) SetStatusMessage(v string) *ExportImageTask {
 	s.StatusMessage = &v
+	return s
+}
+
+// SetTags sets the Tags field's value.
+func (s *ExportImageTask) SetTags(v []*Tag) *ExportImageTask {
+	s.Tags = v
 	return s
 }
 
@@ -73563,7 +73639,7 @@ func (s *ExportTask) SetTags(v []*Tag) *ExportTask {
 type ExportTaskS3Location struct {
 	_ struct{} `type:"structure"`
 
-	// The destination S3 bucket.
+	// The destination Amazon S3 bucket.
 	S3Bucket *string `locationName:"s3Bucket" type:"string"`
 
 	// The prefix (logical hierarchy) in the bucket.
@@ -73596,7 +73672,7 @@ func (s *ExportTaskS3Location) SetS3Prefix(v string) *ExportTaskS3Location {
 type ExportTaskS3LocationRequest struct {
 	_ struct{} `type:"structure"`
 
-	// The destination S3 bucket.
+	// The destination Amazon S3 bucket.
 	//
 	// S3Bucket is a required field
 	S3Bucket *string `type:"string" required:"true"`
@@ -73651,8 +73727,8 @@ type ExportToS3Task struct {
 	// The format for the exported image.
 	DiskImageFormat *string `locationName:"diskImageFormat" type:"string" enum:"DiskImageFormat"`
 
-	// The S3 bucket for the destination image. The destination bucket must exist
-	// and grant WRITE and READ_ACP permissions to the AWS account vm-import-export@amazon.com.
+	// The Amazon S3 bucket for the destination image. The destination bucket must
+	// exist and grant WRITE and READ_ACP permissions to the AWS account vm-import-export@amazon.com.
 	S3Bucket *string `locationName:"s3Bucket" type:"string"`
 
 	// The encryption key for your S3 bucket.
@@ -73704,12 +73780,12 @@ type ExportToS3TaskSpecification struct {
 	// The format for the exported image.
 	DiskImageFormat *string `locationName:"diskImageFormat" type:"string" enum:"DiskImageFormat"`
 
-	// The S3 bucket for the destination image. The destination bucket must exist
-	// and grant WRITE and READ_ACP permissions to the AWS account vm-import-export@amazon.com.
+	// The Amazon S3 bucket for the destination image. The destination bucket must
+	// exist and grant WRITE and READ_ACP permissions to the AWS account vm-import-export@amazon.com.
 	S3Bucket *string `locationName:"s3Bucket" type:"string"`
 
-	// The image is written to a single object in the S3 bucket at the S3 key s3prefix
-	// + exportTaskId + '.' + diskImageFormat.
+	// The image is written to a single object in the Amazon S3 bucket at the S3
+	// key s3prefix + exportTaskId + '.' + diskImageFormat.
 	S3Prefix *string `locationName:"s3Prefix" type:"string"`
 }
 
@@ -76965,7 +77041,7 @@ func (s *GroupIdentifier) SetGroupName(v string) *GroupIdentifier {
 
 // Indicates whether your instance is configured for hibernation. This parameter
 // is valid only if the instance meets the hibernation prerequisites (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#hibernating-prerequisites).
-// For more information, see Hibernate Your Instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
+// For more information, see Hibernate your instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 type HibernationOptions struct {
 	_ struct{} `type:"structure"`
@@ -76993,7 +77069,7 @@ func (s *HibernationOptions) SetConfigured(v bool) *HibernationOptions {
 
 // Indicates whether your instance is configured for hibernation. This parameter
 // is valid only if the instance meets the hibernation prerequisites (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#hibernating-prerequisites).
-// For more information, see Hibernate Your Instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
+// For more information, see Hibernate your instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
 // in the Amazon Elastic Compute Cloud User Guide.
 type HibernationOptionsRequest struct {
 	_ struct{} `type:"structure"`
@@ -78143,7 +78219,7 @@ type ImageDiskContainer struct {
 
 	// The format of the disk image being imported.
 	//
-	// Valid values: VHD | VMDK | OVA
+	// Valid values: OVA | VHD | VHDX |VMDK
 	Format *string `type:"string"`
 
 	// The ID of the EBS snapshot to be used for importing the snapshot.
@@ -78385,6 +78461,9 @@ type ImportImageInput struct {
 
 	// The name of the role to use when not using the default role, 'vmimport'.
 	RoleName *string `type:"string"`
+
+	// The tags to apply to the image being imported.
+	TagSpecifications []*TagSpecification `locationName:"TagSpecification" locationNameList:"item" type:"list"`
 }
 
 // String returns the string representation
@@ -78475,6 +78554,12 @@ func (s *ImportImageInput) SetRoleName(v string) *ImportImageInput {
 	return s
 }
 
+// SetTagSpecifications sets the TagSpecifications field's value.
+func (s *ImportImageInput) SetTagSpecifications(v []*TagSpecification) *ImportImageInput {
+	s.TagSpecifications = v
+	return s
+}
+
 // The request information of license configurations.
 type ImportImageLicenseConfigurationRequest struct {
 	_ struct{} `type:"structure"`
@@ -78532,7 +78617,7 @@ type ImportImageOutput struct {
 	// A description of the import task.
 	Description *string `locationName:"description" type:"string"`
 
-	// Indicates whether the AMI is encypted.
+	// Indicates whether the AMI is encrypted.
 	Encrypted *bool `locationName:"encrypted" type:"boolean"`
 
 	// The target hypervisor of the import task.
@@ -78568,6 +78653,9 @@ type ImportImageOutput struct {
 
 	// A detailed status message of the import task.
 	StatusMessage *string `locationName:"statusMessage" type:"string"`
+
+	// Any tags assigned to the image being imported.
+	Tags []*Tag `locationName:"tagSet" locationNameList:"item" type:"list"`
 }
 
 // String returns the string representation
@@ -78661,6 +78749,12 @@ func (s *ImportImageOutput) SetStatus(v string) *ImportImageOutput {
 // SetStatusMessage sets the StatusMessage field's value.
 func (s *ImportImageOutput) SetStatusMessage(v string) *ImportImageOutput {
 	s.StatusMessage = &v
+	return s
+}
+
+// SetTags sets the Tags field's value.
+func (s *ImportImageOutput) SetTags(v []*Tag) *ImportImageOutput {
+	s.Tags = v
 	return s
 }
 
@@ -79364,6 +79458,9 @@ type ImportSnapshotInput struct {
 
 	// The name of the role to use when not using the default role, 'vmimport'.
 	RoleName *string `type:"string"`
+
+	// The tags to apply to the snapshot being imported.
+	TagSpecifications []*TagSpecification `locationName:"TagSpecification" locationNameList:"item" type:"list"`
 }
 
 // String returns the string representation
@@ -79424,6 +79521,12 @@ func (s *ImportSnapshotInput) SetRoleName(v string) *ImportSnapshotInput {
 	return s
 }
 
+// SetTagSpecifications sets the TagSpecifications field's value.
+func (s *ImportSnapshotInput) SetTagSpecifications(v []*TagSpecification) *ImportSnapshotInput {
+	s.TagSpecifications = v
+	return s
+}
+
 type ImportSnapshotOutput struct {
 	_ struct{} `type:"structure"`
 
@@ -79435,6 +79538,9 @@ type ImportSnapshotOutput struct {
 
 	// Information about the import snapshot task.
 	SnapshotTaskDetail *SnapshotTaskDetail `locationName:"snapshotTaskDetail" type:"structure"`
+
+	// Any tags assigned to the snapshot being imported.
+	Tags []*Tag `locationName:"tagSet" locationNameList:"item" type:"list"`
 }
 
 // String returns the string representation
@@ -79462,6 +79568,12 @@ func (s *ImportSnapshotOutput) SetImportTaskId(v string) *ImportSnapshotOutput {
 // SetSnapshotTaskDetail sets the SnapshotTaskDetail field's value.
 func (s *ImportSnapshotOutput) SetSnapshotTaskDetail(v *SnapshotTaskDetail) *ImportSnapshotOutput {
 	s.SnapshotTaskDetail = v
+	return s
+}
+
+// SetTags sets the Tags field's value.
+func (s *ImportSnapshotOutput) SetTags(v []*Tag) *ImportSnapshotOutput {
+	s.Tags = v
 	return s
 }
 
@@ -86572,7 +86684,7 @@ type ModifyInstanceAttributeInput struct {
 	//
 	// To add instance store volumes to an Amazon EBS-backed instance, you must
 	// add them when you launch the instance. For more information, see Updating
-	// the Block Device Mapping when Launching an Instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM)
+	// the block device mapping when launching an instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM)
 	// in the Amazon Elastic Compute Cloud User Guide.
 	BlockDeviceMappings []*InstanceBlockDeviceMappingSpecification `locationName:"blockDeviceMapping" locationNameList:"item" type:"list"`
 
@@ -86615,7 +86727,7 @@ type ModifyInstanceAttributeInput struct {
 	InstanceInitiatedShutdownBehavior *AttributeValue `locationName:"instanceInitiatedShutdownBehavior" type:"structure"`
 
 	// Changes the instance type to the specified value. For more information, see
-	// Instance Types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html).
+	// Instance types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html).
 	// If the instance type is not valid, the error returned is InvalidInstanceAttributeValue.
 	InstanceType *AttributeValue `locationName:"instanceType" type:"structure"`
 
@@ -93017,6 +93129,9 @@ type PurchaseHostReservationInput struct {
 	//
 	// OfferingId is a required field
 	OfferingId *string `type:"string" required:"true"`
+
+	// The tags to apply to the Dedicated Host Reservation during purchase.
+	TagSpecifications []*TagSpecification `locationName:"TagSpecification" locationNameList:"item" type:"list"`
 }
 
 // String returns the string representation
@@ -93072,6 +93187,12 @@ func (s *PurchaseHostReservationInput) SetLimitPrice(v string) *PurchaseHostRese
 // SetOfferingId sets the OfferingId field's value.
 func (s *PurchaseHostReservationInput) SetOfferingId(v string) *PurchaseHostReservationInput {
 	s.OfferingId = &v
+	return s
+}
+
+// SetTagSpecifications sets the TagSpecifications field's value.
+func (s *PurchaseHostReservationInput) SetTagSpecifications(v []*TagSpecification) *PurchaseHostReservationInput {
+	s.TagSpecifications = v
 	return s
 }
 
@@ -98475,14 +98596,14 @@ type RunInstancesInput struct {
 	ClientToken *string `locationName:"clientToken" type:"string" idempotencyToken:"true"`
 
 	// The CPU options for the instance. For more information, see Optimizing CPU
-	// Options (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html)
+	// options (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html)
 	// in the Amazon Elastic Compute Cloud User Guide.
 	CpuOptions *CpuOptionsRequest `type:"structure"`
 
 	// The credit option for CPU usage of the burstable performance instance. Valid
 	// values are standard and unlimited. To change this attribute after launch,
 	// use ModifyInstanceCreditSpecification (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceCreditSpecification.html).
-	// For more information, see Burstable Performance Instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
+	// For more information, see Burstable performance instances (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
 	// in the Amazon Elastic Compute Cloud User Guide.
 	//
 	// Default: standard (T2 instances) or unlimited (T3/T3a instances)
@@ -98526,7 +98647,7 @@ type RunInstancesInput struct {
 	ElasticInferenceAccelerators []*ElasticInferenceAccelerator `locationName:"ElasticInferenceAccelerator" locationNameList:"item" type:"list"`
 
 	// Indicates whether an instance is enabled for hibernation. For more information,
-	// see Hibernate Your Instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
+	// see Hibernate your instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
 	// in the Amazon Elastic Compute Cloud User Guide.
 	HibernationOptions *HibernationOptionsRequest `type:"structure"`
 
@@ -98549,7 +98670,7 @@ type RunInstancesInput struct {
 	// InstanceInterruptionBehavior is set to either hibernate or stop.
 	InstanceMarketOptions *InstanceMarketOptionsRequest `type:"structure"`
 
-	// The instance type. For more information, see Instance Types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
+	// The instance type. For more information, see Instance types (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
 	// in the Amazon Elastic Compute Cloud User Guide.
 	//
 	// Default: m1.small
@@ -98609,7 +98730,7 @@ type RunInstancesInput struct {
 	MaxCount *int64 `type:"integer" required:"true"`
 
 	// The metadata options for the instance. For more information, see Instance
-	// Metadata and User Data (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html).
+	// metadata and user data (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html).
 	MetadataOptions *InstanceMetadataOptionsRequest `type:"structure"`
 
 	// The minimum number of instances to launch. If you specify a minimum that
@@ -98686,7 +98807,7 @@ type RunInstancesInput struct {
 	TagSpecifications []*TagSpecification `locationName:"TagSpecification" locationNameList:"item" type:"list"`
 
 	// The user data to make available to the instance. For more information, see
-	// Running Commands on Your Linux Instance at Launch (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
+	// Running commands on your Linux instance at launch (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
 	// (Linux) and Adding User Data (https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data)
 	// (Windows). If you are using a command line tool, base64-encoding is performed
 	// for you, and you can load the text from a file. Otherwise, you must provide
@@ -101192,9 +101313,10 @@ type Snapshot struct {
 	// key for the parent volume.
 	KmsKeyId *string `locationName:"kmsKeyId" type:"string"`
 
-	// Value from an Amazon-maintained list (amazon | self | all | aws-marketplace
-	// | microsoft) of snapshot owners. Not to be confused with the user-configured
-	// AWS account alias, which is set from the IAM console.
+	// The AWS owner alias, as maintained by Amazon. The possible values are: amazon
+	// | self | all | aws-marketplace | microsoft. This AWS owner alias is not to
+	// be confused with the user-configured AWS account alias, which is set from
+	// the IAM console.
 	OwnerAlias *string `locationName:"ownerAlias" type:"string"`
 
 	// The AWS account ID of the EBS snapshot owner.
@@ -101357,7 +101479,7 @@ type SnapshotDetail struct {
 	// The URL used to access the disk image.
 	Url *string `locationName:"url" type:"string"`
 
-	// The S3 bucket for the disk image.
+	// The Amazon S3 bucket for the disk image.
 	UserBucket *UserBucketDetails `locationName:"userBucket" type:"structure"`
 }
 
@@ -101447,7 +101569,7 @@ type SnapshotDiskContainer struct {
 	// a https URL (https://..) or an Amazon S3 URL (s3://..).
 	Url *string `type:"string"`
 
-	// The S3 bucket for the disk image.
+	// The Amazon S3 bucket for the disk image.
 	UserBucket *UserBucket `type:"structure"`
 }
 
@@ -101627,7 +101749,7 @@ type SnapshotTaskDetail struct {
 	// The URL of the disk image from which the snapshot is created.
 	Url *string `locationName:"url" type:"string"`
 
-	// The S3 bucket for the disk image.
+	// The Amazon S3 bucket for the disk image.
 	UserBucket *UserBucketDetails `locationName:"userBucket" type:"structure"`
 }
 
@@ -103482,7 +103604,7 @@ type StopInstancesInput struct {
 
 	// Hibernates the instance if the instance was enabled for hibernation at launch.
 	// If the instance cannot hibernate successfully, a normal shutdown occurs.
-	// For more information, see Hibernate Your Instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
+	// For more information, see Hibernate your instance (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html)
 	// in the Amazon Elastic Compute Cloud User Guide.
 	//
 	// Default: false
@@ -104047,12 +104169,12 @@ type TagSpecification struct {
 
 	// The type of resource to tag. Currently, the resource types that support tagging
 	// on creation are: capacity-reservation | client-vpn-endpoint | dedicated-host
-	// | fleet | fpga-image | instance | ipv4pool-ec2 | ipv6pool-ec2 | key-pair
-	// | launch-template | natgateway | spot-fleet-request | placement-group | snapshot
-	// | traffic-mirror-filter | traffic-mirror-session | traffic-mirror-target
+	// | fleet | fpga-image | host-reservation | instance | ipv4pool-ec2 | ipv6pool-ec2
+	// | key-pair | launch-template | natgateway | spot-fleet-request | placement-group
+	// | snapshot | traffic-mirror-filter | traffic-mirror-session | traffic-mirror-target
 	// | transit-gateway | transit-gateway-attachment | transit-gateway-route-table
-	// | vpc-endpoint (for interface VPC endpoints)| vpc-endpoint-service (for gateway
-	// VPC endpoints) | volume | vpc-flow-log.
+	// | vpc-endpoint (for interface and gateway endpoints) | vpc-endpoint-service
+	// (for AWS PrivateLink) | volume | vpc-flow-log.
 	//
 	// To tag a resource after it has been created, see CreateTags (https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html).
 	ResourceType *string `locationName:"resourceType" type:"string" enum:"ResourceType"`
@@ -107357,11 +107479,11 @@ func (s *UpdateSecurityGroupRuleDescriptionsIngressOutput) SetReturn(v bool) *Up
 	return s
 }
 
-// Describes the S3 bucket for the disk image.
+// Describes the Amazon S3 bucket for the disk image.
 type UserBucket struct {
 	_ struct{} `type:"structure"`
 
-	// The name of the S3 bucket where the disk image is located.
+	// The name of the Amazon S3 bucket where the disk image is located.
 	S3Bucket *string `type:"string"`
 
 	// The file name of the disk image.
@@ -107390,11 +107512,11 @@ func (s *UserBucket) SetS3Key(v string) *UserBucket {
 	return s
 }
 
-// Describes the S3 bucket for the disk image.
+// Describes the Amazon S3 bucket for the disk image.
 type UserBucketDetails struct {
 	_ struct{} `type:"structure"`
 
-	// The S3 bucket from which the disk image was created.
+	// The Amazon S3 bucket from which the disk image was created.
 	S3Bucket *string `locationName:"s3Bucket" type:"string"`
 
 	// The file name of the disk image.
@@ -108031,7 +108153,7 @@ type VolumeModification struct {
 	// The original IOPS rate of the volume.
 	OriginalIops *int64 `locationName:"originalIops" type:"integer"`
 
-	// The original size of the volume.
+	// The original size of the volume, in GiB.
 	OriginalSize *int64 `locationName:"originalSize" type:"integer"`
 
 	// The original EBS volume type of the volume.
@@ -110440,6 +110562,17 @@ const (
 )
 
 const (
+	// EbsNvmeSupportUnsupported is a EbsNvmeSupport enum value
+	EbsNvmeSupportUnsupported = "unsupported"
+
+	// EbsNvmeSupportSupported is a EbsNvmeSupport enum value
+	EbsNvmeSupportSupported = "supported"
+
+	// EbsNvmeSupportRequired is a EbsNvmeSupport enum value
+	EbsNvmeSupportRequired = "required"
+)
+
+const (
 	// EbsOptimizedSupportUnsupported is a EbsOptimizedSupport enum value
 	EbsOptimizedSupportUnsupported = "unsupported"
 
@@ -112350,6 +112483,15 @@ const (
 	// ResourceTypeElasticIp is a ResourceType enum value
 	ResourceTypeElasticIp = "elastic-ip"
 
+	// ResourceTypeElasticGpu is a ResourceType enum value
+	ResourceTypeElasticGpu = "elastic-gpu"
+
+	// ResourceTypeExportImageTask is a ResourceType enum value
+	ResourceTypeExportImageTask = "export-image-task"
+
+	// ResourceTypeExportInstanceTask is a ResourceType enum value
+	ResourceTypeExportInstanceTask = "export-instance-task"
+
 	// ResourceTypeFleet is a ResourceType enum value
 	ResourceTypeFleet = "fleet"
 
@@ -112362,6 +112504,12 @@ const (
 	// ResourceTypeImage is a ResourceType enum value
 	ResourceTypeImage = "image"
 
+	// ResourceTypeImportImageTask is a ResourceType enum value
+	ResourceTypeImportImageTask = "import-image-task"
+
+	// ResourceTypeImportSnapshotTask is a ResourceType enum value
+	ResourceTypeImportSnapshotTask = "import-snapshot-task"
+
 	// ResourceTypeInstance is a ResourceType enum value
 	ResourceTypeInstance = "instance"
 
@@ -112373,6 +112521,9 @@ const (
 
 	// ResourceTypeLaunchTemplate is a ResourceType enum value
 	ResourceTypeLaunchTemplate = "launch-template"
+
+	// ResourceTypeLocalGatewayRouteTableVpcAssociation is a ResourceType enum value
+	ResourceTypeLocalGatewayRouteTableVpcAssociation = "local-gateway-route-table-vpc-association"
 
 	// ResourceTypeNatgateway is a ResourceType enum value
 	ResourceTypeNatgateway = "natgateway"
